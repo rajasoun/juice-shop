@@ -1,0 +1,83 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "23:30"
+  open-pull-requests-limit: 10
+  target-branch: develop
+  reviewers:
+  - bkimminich
+  labels:
+  - dependencies
+  ignore:
+  - dependency-name: express-jwt
+    versions:
+    - 0.1.3
+  - dependency-name: jsonwebtoken
+    versions:
+    - 0.4.0
+  - dependency-name: sanitize-html
+    versions:
+    - 1.4.2
+  - dependency-name: unzipper
+    versions:
+    - 0.9.15
+  - dependency-name: sanitize-html
+    versions:
+    - 2.3.2
+  - dependency-name: js-yaml
+    versions:
+    - 4.0.0
+- package-ecosystem: npm
+  directory: "/frontend"
+  schedule:
+    interval: daily
+    time: "23:30"
+  open-pull-requests-limit: 10
+  target-branch: develop
+  reviewers:
+  - bkimminich
+  labels:
+  - dependencies
+  ignore:
+  - dependency-name: eslint-plugin-jsdoc
+    versions:
+    - 32.2.0
+    - 32.3.0
+    - 32.3.1
+    - 32.3.2
+  - dependency-name: "@angular-devkit/build-angular"
+    versions:
+    - 0.1102.10
+    - 0.1102.3
+    - 0.1102.4
+    - 0.1102.5
+    - 0.1102.6
+    - 0.1102.7
+    - 0.1102.8
+    - 0.1102.9
+  - dependency-name: "@angular-eslint/builder"
+    versions:
+    - 1.2.0
+    - 2.0.0
+    - 2.0.1
+    - 2.0.2
+    - 2.1.0
+    - 2.1.1
+    - 3.0.0
+    - 3.0.1
+    - 4.0.0
+  - dependency-name: eslint-config-prettier
+    versions:
+    - 8.1.0
+    - 8.2.0
+  - dependency-name: material-icons
+    versions:
+    - 0.5.4
+    - 0.5.5
+    - 0.6.0
+  - dependency-name: typescript
+    versions:
+    - 4.2.3
